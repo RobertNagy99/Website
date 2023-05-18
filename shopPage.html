@@ -1,0 +1,145 @@
+<html>
+<head>
+	<link rel="stylesheet" href="mainPage.css">
+</head>
+<body>
+	<div class="header-container">
+		<div class="title-container">
+			<a href="index.html">psmk7</a>
+		</div>
+		<div class="menu-container">
+			<ul>
+				<li>
+					<a href="cartPage.html">Cart</a>
+				</li>
+				<li>
+					<a href="cartPage.html">Checkout</a>
+				</li>
+				<li>
+					<a href="myAccountPage.html">My Account</a>
+				</li>
+				<li>
+					<a href="samplePage.html">Sample Page</a>
+				</li>
+				<li>
+					<a href="shopPage.html">Shop</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="content-header-container">
+		<h1>Shop</h1>
+	</div>
+	<div class="products">
+		<div class="product-conatiner">
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img class="product-image" src="./bmw 1.jpg" />
+				</div>
+				
+				<div class="mySlides fade">
+					<img class="product-image" src="./bmw2.jpg" />
+				</div>
+				
+				<div class="mySlides fade">
+					<img class="product-image" src="./bmw3.jpg" />
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<p>Bmw s3</p>
+		</div>
+		<div class="product-conatiner">
+			<div class="slideshow-container">
+				<div class="mySlides2 fade">
+					<img class="product-image" src="./x5.jpg" />
+				</div>
+				
+				<div class="mySlides2 fade">
+					<img class="product-image" src="./x5 1.jpg"  />
+				</div>
+				
+				<div class="mySlides2 fade">
+					<img class="product-image" src="./x5 2.jpg" />
+				</div>
+				
+				<a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides2(1)">&#10095;</a>
+			</div>
+			<p>Bmw x5</p>
+		</div>
+	</div>
+	<div class="table-container">
+		<table>
+		  <tr>
+			<th>Produs</th>
+			<th>Pret</th>
+		  </tr>
+		  <tr>
+			<td>Bmw s3</td>
+			<td>100000</td>
+		  </tr>
+		  <tr>
+			<td>Bmw x5</td>
+			<td>500000</td>
+		  </tr>
+		</table>
+	</div>
+	<div class="shop-info-text-container">
+		<p>Comenzile se pot efectua doar prin mesaj privat pe pagina de facebook</p>
+	</div>
+</body>
+</html>
+
+<script>
+let slideIndex = 1;
+let slideIndex2 = 1;
+showSlides(slideIndex);
+showSlides2(slideIndex2);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Next/previous controls
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+// Thumbnail image controls
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+function showSlides2(n) {
+  let i;
+  let slides2 = document.getElementsByClassName("mySlides2");
+  if (n > slides2.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides2.length}
+  if (n > slides2.length) {slideIndex2 = 1}
+  if (n < 1) {slideIndex2 = slides2.length}
+  for (i = 0; i < slides2.length; i++) {
+    slides2[i].style.display = "none";
+  }
+  slides2[slideIndex2-1].style.display = "block";
+}
+</script>
